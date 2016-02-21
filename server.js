@@ -75,6 +75,11 @@ var Todo = mongoose.model('Todo', {
         });
     });
 
+    // aplication ------------------
+    app.get('*', function(req, res) {
+      res.sendfile('./public/index.html');
+    });
+
 
 app.listen(8080);
 console.log("App listening on port 8080");
